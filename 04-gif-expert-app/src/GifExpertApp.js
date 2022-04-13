@@ -4,26 +4,25 @@ import { GifGrid } from './components/GifGrid'
 
 export const GifExpertApp = () => {
 
-   const [categories, setCategories] = useState(['One Punch'])
+   const [categories, setCategories] = useState(['Goku'])
 
    return (
-      <>
-         <h2>GifExpertApp</h2>
-         <AddCategory setCategories= { setCategories }/>
-         <hr />
+      <div className="container">
+         <h1 id="title" className="mt-5">Giph App</h1>
+         <AddCategory setCategories={setCategories} />
+         {
+            categories.map((category, i) => {
+               return <span key={i} className="badge badge-dark mt-3 mr-2">{category}</span>
+            })
+         }
+         <hr className="separator" />
 
+         {
+            categories.map((category, i) =>
+               <GifGrid key={i} category={category} />
+            )
+         }
 
-
-         <ol>
-            {
-               categories.map( category => (
-                  <GifGrid
-                     key={ category } 
-                     category={ category } 
-                  />
-               ))
-            }
-         </ol>
-      </>
+      </div >
    )
 }

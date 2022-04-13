@@ -1,3 +1,8 @@
 -- React
 https://create-react-app.dev/
 
+
+
+--AWS
+** comando para subir web a S3
+aws s3 sync docs/ s3://delga-react --acl public-read
