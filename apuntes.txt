@@ -1,6 +1,10 @@
 -- React
 https://create-react-app.dev/
+https://reactrouter.com/
 
+
+comando para crear un proyecto
+npx create-react-app my-app
 
 
 --AWS
